@@ -1,0 +1,507 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Wisehost · Gestão de Airbnb em São Paulo</title>
+<meta name="description" content="Seu studio cuidado por uma equipe de Superhosts com mais de 560 avaliações e média 4,9. Fotografia, anúncio no ar em 2 dias, limpeza e manutenção próprias, 90% de ocupação nos nossos studios. São Paulo.">
+<!-- Domínio previsto: [PREENCHER: wisehost.com.br?]. Trocar canonical, og:url, og:image, robots.txt e sitemap.xml se for outro. -->
+<link rel="canonical" href="https://wisehost.com.br/">
+<meta name="theme-color" content="#2D1E80">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_BR">
+<meta property="og:site_name" content="Wisehost">
+<meta property="og:title" content="Wisehost · Gestão de Airbnb em São Paulo">
+<meta property="og:description" content="Seu imóvel em boas mãos. Sua conta, aberta. Equipe de Superhosts, mais de 560 avaliações, 90% de ocupação nos nossos studios.">
+<meta property="og:url" content="https://wisehost.com.br/">
+<meta property="og:image" content="https://wisehost.com.br/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Wisehost. Seu imóvel em boas mãos. Sua conta, aberta.">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Wisehost · Gestão de Airbnb em São Paulo">
+<meta name="twitter:description" content="Equipe de Superhosts, mais de 560 avaliações, 90% de ocupação nos nossos studios.">
+<meta name="twitter:image" content="https://wisehost.com.br/assets/img/og-image.png">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Wisehost",
+  "legalName": "Wisekey Estratégia e Assessoria Ltda",
+  "url": "https://wisehost.com.br/",
+  "image": "https://wisehost.com.br/assets/img/og-image.png",
+  "description": "Gestão de imóveis para aluguel por temporada no Airbnb e no Booking. Equipe de Superhosts, fotografia, limpeza e manutenção próprias, relatório mensal conciliado.",
+  "telephone": "+5511955788880",
+  "areaServed": "São Paulo, SP",
+  "founder": {"@type": "Person", "name": "Raphael Piotto Cardoso"},
+  "knowsAbout": ["Airbnb", "Booking.com", "aluguel por temporada", "gestão de studios", "co-hosting"],
+  "parentOrganization": {"@type": "Organization", "name": "Wisekey", "sameAs": "https://www.instagram.com/wisehost.serra/"}
+}
+</script>
+
+<link rel="preload" href="assets/fonts/poppins-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/poppins-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/img/hub-sala-540.webp" as="image" imagesrcset="assets/img/hub-sala-540.webp 540w, assets/img/hub-sala.webp 900w" imagesizes="(min-width: 1200px) 480px, (min-width: 820px) 40vw, 100vw">
+
+<style>
+/*
+Sistema: manual de marca Wisehost v1 (15/10/2026, 01_Marca/03_Sistema_Visual) · logo v2, a chave digital
+Tipo: Poppins em tudo, como o manual v1 revisto em 15/10: 600 título e número · 400 corpo · 500 rótulo. Escala 62/46/24/22/18/15/13. Corpo 18px, entrelinha 1,6.
+Cor: tinta #1C1830 sobre branco (pedido do Raphael em 15/10: site claro, leve de ler) · navy #2D1E80 em título, topo, fecho e rodapé · lilás #F4F2FD de superfície · roxo #5851D9 só na dupla régua
+Espaço: 4/8/12/16/24/32/48/64 · seção 96px desktop, 48px celular · raios 6/12/24
+Assinatura: a dupla régua do contador embaixo de um único número por bloco
+Lógica do funil: header → hero (o que o dono ganha + prova) → nossos studios (fotos andando + ocupação) → quem cuida (equipe Superhost + Raphael) → como enchemos → o que fica com você → hóspedes (avaliações andando) → como começa → perguntas → contato → fecho → rodapé
+Revisão: textos novos com class="r"; <body class="revisao"> mostra [RASCUNHO]. Publicar sem a classe. Site institucional: sem preço.
+Movimento: só CSS (keyframes em transform), pausa no hover, desliga em prefers-reduced-motion.
+*/
+@font-face{font-family:"Poppins";font-weight:400;font-style:normal;font-display:swap;src:url(assets/fonts/poppins-400.woff2) format("woff2")}
+@font-face{font-family:"Poppins";font-weight:500;font-style:normal;font-display:swap;src:url(assets/fonts/poppins-500.woff2) format("woff2")}
+@font-face{font-family:"Poppins";font-weight:600;font-style:normal;font-display:swap;src:url(assets/fonts/poppins-600.woff2) format("woff2")}
+@font-face{font-family:"Poppins";font-weight:700;font-style:normal;font-display:swap;src:url(assets/fonts/poppins-700.woff2) format("woff2")}
+
+:root{
+  --navy:#2D1E80; --ink:#1C1830; --ink-2:#5E5A72;
+  --paper:#FFFFFF; --surface:#F4F2FD; --line:#DCD6F2;
+  --soft:#EEEBFA; --mist:#B8A6F0; --accent:#5851D9;
+  --f:"Poppins","Helvetica Neue",Arial,sans-serif;
+  --ease:cubic-bezier(0.23,1,0.32,1);
+  --wrap:1120px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--f);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-inline:clamp(20px,5vw,56px)}
+h1,h2,h3,h4{margin:0;text-wrap:balance;letter-spacing:-0.02em;line-height:1.08;font-weight:600}
+h1{font-size:clamp(34px,5.4vw,60px)}
+h2{font-size:clamp(28px,4vw,44px)}
+h3{font-size:clamp(19px,2.2vw,23px);letter-spacing:-0.012em;line-height:1.25}
+p{margin:0}
+a{color:inherit}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid currentColor;outline-offset:4px}
+.eyebrow{font-size:12px;letter-spacing:.08em;text-transform:uppercase;font-weight:500;display:flex;align-items:center;gap:12px}
+.eyebrow::before{content:"";width:10px;height:10px;background:currentColor;flex:none}
+.lede{font-size:clamp(18px,2vw,21px);line-height:1.55;max-width:68ch;font-weight:400}
+.n{font-weight:600;letter-spacing:-0.02em;font-variant-numeric:tabular-nums}
+.revisao .r::before{content:"[RASCUNHO] ";font-size:11px;letter-spacing:.06em;font-weight:500;opacity:.7;vertical-align:.25em}
+.revisao .r.block::before{display:block;grid-column:1/-1;margin-bottom:8px}
+.total{display:inline-block;padding-bottom:6px;border-bottom:6px double var(--accent)}
+
+.btn{font-weight:600;font-size:15px;line-height:1;text-decoration:none;padding:15px 20px;min-height:48px;border:1.5px solid currentColor;border-radius:6px;display:inline-flex;align-items:center;gap:10px;transition:background-color 140ms var(--ease),color 140ms var(--ease)}
+.btn svg{width:18px;height:18px;flex:none}
+.btn.solid{background:var(--paper);color:var(--navy);border-color:var(--paper)}
+.btn.solid:hover{background:transparent;color:var(--paper)}
+.btn.navy{background:var(--navy);color:var(--paper);border-color:var(--navy)}
+.btn.navy:hover{background:transparent;color:var(--navy)}
+.btn.ghost{background:transparent}
+
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--navy);color:var(--paper);border-bottom:1px solid rgba(247,246,251,.18)}
+.top .in{display:flex;align-items:center;justify-content:space-between;gap:24px;padding-block:12px}
+.top .logo{display:block;line-height:0;text-decoration:none}
+.top .logo img{height:28px;width:auto;display:block}
+.top nav{display:flex;gap:28px;align-items:center;font-size:15px;font-weight:500}
+.top nav a:not(.btn){text-decoration:none;opacity:.85;white-space:nowrap;transition:opacity 140ms var(--ease)}
+.top nav a:not(.btn):hover{opacity:1}
+.top nav .btn{padding:11px 14px;min-height:42px}
+@media (max-width:860px){.top nav a:not(.btn){display:none}.top nav{gap:0}}
+
+.hero{background:var(--paper);color:var(--ink);padding-block:clamp(64px,10vw,120px) clamp(56px,8vw,96px)}
+.hero .eyebrow{color:var(--navy)}
+.hero .grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:40px 56px;align-items:center}
+@media (max-width:820px){.hero .grid{grid-template-columns:1fr}}
+.hero .pic{border-radius:24px;overflow:hidden;aspect-ratio:3/4;max-height:640px;justify-self:end;width:100%;max-width:480px}
+@media (max-width:820px){.hero .pic{aspect-ratio:4/3;max-width:none;justify-self:stretch}}
+.hero .pic img{width:100%;height:100%;object-fit:cover;display:block}
+.hero h1{margin-top:24px;max-width:20ch;color:var(--navy)}
+.hero .lede{margin-top:28px;color:var(--ink-2)}
+.hero .cta{margin-top:40px;display:flex;gap:16px;flex-wrap:wrap}
+.hero .proof{margin-top:clamp(56px,8vw,88px);border-top:1px solid var(--line);padding-top:28px;display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:32px 48px;align-items:end}
+@media (max-width:820px){.hero .proof{grid-template-columns:1fr}}
+.hero .big{font-size:clamp(48px,7.5vw,84px);line-height:1}
+.hero .big{color:var(--navy)}
+.hero .bigk{margin-top:14px;font-size:15px;color:var(--ink-2);max-width:44ch;line-height:1.5}
+.facts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 24px}
+.fact .v{font-size:clamp(24px,2.8vw,30px);line-height:1;color:var(--navy)}
+.fact .k{margin-top:8px;font-size:14.5px;color:var(--ink-2);line-height:1.45;max-width:22ch}
+
+section{padding-block:clamp(48px,8vw,96px)}
+.sec-h{display:grid;grid-template-columns:1fr;gap:20px;max-width:960px}
+.sec-h .eyebrow{color:var(--navy);margin-bottom:16px}
+.sec-h h2{color:var(--navy)}
+.sec-h .lede{color:var(--ink-2);margin-top:4px}
+.dark{background:var(--navy);color:var(--paper)}
+.dark .sec-h .eyebrow{color:var(--mist)}
+.dark .sec-h h2{color:var(--paper)}
+.dark .sec-h .lede{color:var(--soft)}
+.tint{background:var(--surface)}
+.deepbg{background:var(--ink);color:var(--paper)}
+
+/* faixas em movimento */
+.marquee{overflow:hidden;margin-top:48px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
+.marquee+.marquee{margin-top:16px}
+.track{display:flex;gap:16px;width:max-content;animation:slide 60s linear infinite}
+.marquee.rev .track{animation-direction:reverse;animation-duration:75s}
+.marquee.slow .track{animation-duration:90s}
+.marquee:hover .track{animation-play-state:paused}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.shot{flex:none;width:420px;aspect-ratio:4/3;overflow:hidden;border-radius:12px;background:var(--surface)}
+.shot img{width:100%;height:100%;object-fit:cover;display:block}
+@media (max-width:720px){.shot{width:280px}}
+.card{flex:none;width:340px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px 24px}
+@media (max-width:720px){.card{width:280px}}
+.card .stars{font-size:12px;color:var(--navy);letter-spacing:.14em}
+.card p{margin-top:10px;font-size:16px;color:var(--ink);line-height:1.5}
+.card cite{display:block;margin-top:12px;font-style:normal;font-size:12.5px;color:var(--ink-2);font-weight:500}
+@media (prefers-reduced-motion:reduce){.track{animation:none;flex-wrap:wrap;width:auto}.marquee{mask-image:none;-webkit-mask-image:none}.track .dup{display:none}}
+
+.tiles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 32px;margin-top:48px;border-top:3px solid var(--navy)}
+@media (max-width:820px){.tiles{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.tile{padding:24px 0;border-bottom:1px solid var(--line)}
+.tile .v{font-size:clamp(28px,3.4vw,40px);line-height:1.05;color:var(--navy)}
+.tile .k{margin-top:10px;font-size:14.5px;color:var(--ink-2);line-height:1.5;max-width:26ch}
+.src{margin-top:24px;font-size:12.5px;color:var(--ink-2);max-width:70ch;line-height:1.6}
+.rule{margin-top:40px;font-weight:600;font-size:clamp(20px,2.4vw,26px);letter-spacing:-0.012em;max-width:34ch;line-height:1.25;color:var(--navy)}
+.dark .rule{color:var(--paper)}
+
+/* quem cuida */
+@media (max-width:820px){.who{grid-template-columns:1fr}}
+.team{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px;margin-top:56px;border-top:3px solid var(--navy)}
+@media (max-width:720px){.team{grid-template-columns:1fr}}
+.pp{padding:28px 0 32px;border-bottom:1px solid var(--line)}
+.pp h3{color:var(--navy)}
+.pp .tag{font-size:13.5px;color:var(--ink-2);margin-top:8px;font-weight:500}
+.pp p{margin-top:12px;font-size:16px;color:var(--ink-2)}
+.pp .stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:20px}
+.pp .stats .v{font-size:clamp(22px,2.6vw,28px);color:var(--navy);line-height:1}
+.pp .stats .k{margin-top:6px;font-size:13.5px;color:var(--ink-2);line-height:1.4}
+.pp .lk{display:inline-block;margin-top:18px;font-weight:600;font-size:15px;color:var(--navy);text-decoration:underline;text-underline-offset:3px}
+.crew{margin-top:64px;border-top:3px solid var(--navy);padding-top:32px}
+.crew h3{color:var(--navy)}
+.crew ul{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 48px}
+@media (max-width:820px){.crew ul{grid-template-columns:1fr}}
+.crew li{padding:0 0 20px 22px;position:relative;font-size:16px;color:var(--ink-2);line-height:1.5;border-bottom:1px solid var(--line)}
+.crew li::before{content:"";position:absolute;left:0;top:.5em;width:8px;height:8px;background:var(--navy)}
+.crew li b{display:block;font-weight:600;color:var(--navy);font-size:16.5px;margin-bottom:2px}
+
+/* áreas */
+.areas{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 56px;margin-top:56px}
+@media (max-width:820px){.areas{grid-template-columns:1fr}}
+.area{border-top:3px solid var(--navy);padding:24px 0 36px}
+.area .num{font-size:13px;color:var(--ink-2);letter-spacing:.06em;font-weight:500}
+.area h3{margin-top:8px;color:var(--navy)}
+.area p{margin-top:10px;font-size:16px;color:var(--ink-2);line-height:1.55}
+
+.steps{margin:48px 0 0;padding:0;list-style:none;counter-reset:s;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 32px;border-top:1px solid var(--line)}
+@media (max-width:820px){.steps{grid-template-columns:1fr}}
+.steps li{counter-increment:s;padding:24px 0;border-bottom:1px solid var(--line)}
+.steps li::before{content:counter(s,decimal-leading-zero);font-size:13px;color:var(--ink-2);display:block;font-weight:500}
+.steps h3{margin-top:10px;color:var(--navy);font-size:20px}
+.steps p{margin-top:8px;font-size:16px;color:var(--ink-2)}
+
+.faq{margin-top:40px;border-top:3px solid var(--navy)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{cursor:pointer;list-style:none;padding:18px 0;font-weight:600;font-size:17.5px;color:var(--navy);display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;font-weight:400}
+.faq details[open] summary::after{content:"–"}
+.faq p{padding:0 0 20px;font-size:16.5px;color:var(--ink-2);max-width:80ch;line-height:1.55}
+
+.contact .head{max-width:960px}
+.contact h2{color:var(--navy)}
+.contact .eyebrow{color:var(--navy);margin-bottom:20px}
+.contact .lede{margin-top:20px;color:var(--ink-2)}
+.ct{border-top:3px solid var(--navy);margin:40px 0 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px}
+@media (max-width:720px){.ct{grid-template-columns:1fr}}
+.ct .row{display:grid;grid-template-columns:1fr;gap:6px;padding:18px 0;border-bottom:1px solid var(--line)}
+.ct dt{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2);font-weight:500}
+.ct dd{margin:0;font-weight:600;font-size:19px;color:var(--ink);overflow-wrap:anywhere}
+.ct dd a{text-decoration:underline;text-underline-offset:3px;text-decoration-color:var(--line)}
+.ct dd small{display:block;font-weight:400;font-size:15px;color:var(--ink-2);margin-top:2px}
+
+.close{padding-block:clamp(48px,8vw,96px)}
+.close .sigline{font-weight:500;font-size:17px;color:var(--mist)}
+.close h2{margin-top:16px;max-width:20ch}
+.close .btn{margin-top:32px}
+footer{background:var(--navy);color:var(--mist);padding-block:48px;border-top:1px solid rgba(247,246,251,.15)}
+footer .in{display:flex;justify-content:space-between;gap:24px 48px;flex-wrap:wrap;align-items:flex-end}
+footer img{height:32px;width:auto;display:block}
+footer .links{margin-top:16px;display:flex;gap:20px;flex-wrap:wrap;font-size:15px;font-weight:500}
+footer .links a{color:var(--paper);text-decoration:underline;text-underline-offset:3px;text-decoration-color:rgba(247,246,251,.3)}
+footer .legal{font-size:12.5px;line-height:1.8;text-align:right;max-width:60ch}
+@media (max-width:720px){footer .legal{text-align:left}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="wa" viewBox="0 0 32 32"><path fill="currentColor" d="M16 2.9C8.8 2.9 2.9 8.8 2.9 16c0 2.5.7 4.9 1.9 7L3 29l6.2-1.7c2 1.1 4.3 1.7 6.8 1.7 7.2 0 13.1-5.9 13.1-13.1S23.2 2.9 16 2.9zm0 23.7c-2.2 0-4.4-.6-6.2-1.7l-.4-.2-4.2 1.1 1.1-4.1-.3-.4c-1.2-1.9-1.9-4.1-1.9-6.3 0-6.1 5-11.1 11.1-11.1s11.1 5 11.1 11.1-5.1 11.1-11.1 11.1zm5.9-8.2c-.3-.2-1.9-1-2.2-1.1-.3-.1-.5-.2-.7.2-.2.3-.8 1.1-1 1.3-.2.2-.4.2-.7.1-.3-.2-1.3-.5-2.5-1.6-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.7.1-.1.3-.4.5-.5.2-.2.2-.3.3-.5.1-.2.1-.4 0-.5-.1-.2-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1.1 2.8 1.2 3c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.9-.8 2.1-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.3z"/></symbol>
+</svg>
+
+<header class="top"><div class="wrap in">
+  <a class="logo" href="#topo" aria-label="Wisehost, início"><img src="assets/img/wisehost-logo-branco.svg" alt="Wisehost" width="173" height="28"></a>
+  <nav aria-label="Principal">
+    <a href="#studios">Nossos studios</a>
+    <a href="#equipe">Quem cuida</a>
+    <a href="#servico">O que fica com você</a>
+    <a href="#hospedes">Hóspedes</a>
+    <a href="#contato">Contato</a>
+    <a class="btn solid" href="https://wa.me/5511955788880?text=Oi%2C%20vim%20pelo%20site%20da%20Wisehost.%20Tenho%20um%20im%C3%B3vel%20em%20%5Bbairro%5D%20e%20quero%20conversar%20sobre%20a%20gest%C3%A3o." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Falar com a equipe</a>
+  </nav>
+</div></header>
+
+<main>
+
+<div class="hero" id="topo"><div class="wrap">
+ <div class="grid">
+ <div>
+  <p class="eyebrow">Gestão de Airbnb e Booking · São Paulo</p>
+  <h1>Seu imóvel em boas mãos. Sua conta, aberta.</h1>
+  <p class="lede"><span class="r">Você comprou um imóvel para render. A Wisehost faz ele render sem tomar o seu tempo: uma equipe de Superhosts cuida do anúncio, do preço, do hóspede, da limpeza e da manutenção. Você recebe na sua conta e confere cada real no relatório do mês.</span></p>
+  <div class="cta">
+    <a class="btn navy" href="https://wa.me/5511955788880?text=Oi%2C%20vim%20pelo%20site%20da%20Wisehost.%20Tenho%20um%20im%C3%B3vel%20em%20%5Bbairro%5D%20e%20quero%20conversar%20sobre%20a%20gest%C3%A3o." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Falar com a equipe</a>
+    <a class="btn ghost" href="#studios" style="color:var(--navy)">Ver nossos studios</a>
+  </div>
+ </div>
+ <div class="pic"><img src="assets/img/hub-sala-540.webp" srcset="assets/img/hub-sala-540.webp 540w, assets/img/hub-sala.webp 900w" sizes="(min-width: 1200px) 480px, (min-width: 820px) 40vw, 100vw" alt="Studio da Wisehost em Santo Amaro: cama de casal arrumada, bancada e janela para a cidade" width="900" height="1200" fetchpriority="high"></div>
+ </div>
+  <div class="proof">
+    <div>
+      <div class="big n"><span class="total">+560</span></div>
+      <p class="bigk r">avaliações de hóspedes nos perfis da equipe no Airbnb, média 4,9 em 5. Conferidas em 15/10/2026.</p>
+    </div>
+    <div class="facts">
+      <div class="fact"><div class="v n">90%</div><div class="k r">de ocupação nos nossos studios, contra 60% da média da cidade</div></div>
+      <div class="fact"><div class="v n">2 dias</div><div class="k r">da visita do fotógrafo ao seu anúncio no ar</div></div>
+      <div class="fact"><div class="v n">1 h</div><div class="k r">no máximo para o hóspede ter resposta</div></div>
+      <div class="fact"><div class="v n">R$ 0</div><div class="k r">de faxina no seu bolso: o hóspede paga</div></div>
+    </div>
+  </div>
+</div></div>
+
+<section class="tint" id="studios"><div class="wrap">
+  <div class="sec-h">
+    <div><p class="eyebrow">Nossos studios</p><h2 class="r">Antes de cuidar do seu, cuidamos dos nossos. Olhe como eles estão.</h2></div>
+    <p class="lede"><span class="r">Studios próprios em Santo Amaro, Campo Belo e Alto da Boa Vista. Os números abaixo são dos relatórios do mês. O seu imóvel recebe o mesmo padrão, da fotografia ao enxoval.</span></p>
+  </div>
+</div>
+  <div class="marquee slow r block" aria-label="Fotos dos nossos studios"><div class="track">
+    <div class="shot"><img src="assets/img/hub-sala.webp" alt="Studio em Santo Amaro: cama de casal, bancada e janela para a cidade" width="900" height="1200" loading="lazy"></div>
+    <div class="shot"><img src="assets/img/movi-04.webp" alt="Vista do studio em Campo Belo sobre os prédios da zona sul" width="1200" height="900" loading="lazy"></div>
+    <div class="shot"><img src="assets/img/belo-02.webp" alt="Studio no Alto da Boa Vista: cama arrumada com manta azul e janela" width="1200" height="900" loading="lazy"></div>
+    <div class="shot"><img src="assets/img/hub-varanda.webp" alt="Varanda do studio com duas poltronas e vista para São Paulo" width="1200" height="900" loading="lazy"></div>
+    <div class="shot"><img src="assets/img/movi-01.webp" alt="Cama de casal pronta para o hóspede no studio de Campo Belo" width="1200" height="900" loading="lazy"></div>
+    <div class="shot"><img src="assets/img/belo-09.webp" alt="Cozinha compacta com cooktop e armários claros" width="1200" height="900" loading="lazy"></div>
+    <div class="shot"><img src="assets/img/movi-24.webp" alt="Piscina do condomínio em Campo Belo" width="1200" height="900" loading="lazy"></div>
+    <div class="shot"><img src="assets/img/hub-cozinha.webp" alt="Cozinha com geladeira inox e cooktop" width="900" height="1200" loading="lazy"></div>
+    <div class="shot"><img src="assets/img/belo-14.webp" alt="Bancada com duas banquetas e TV" width="1200" height="900" loading="lazy"></div>
+    <div class="shot"><img src="assets/img/movi-26.webp" alt="Academia do condomínio em Campo Belo" width="1200" height="900" loading="lazy"></div>
+    <div class="shot"><img src="assets/img/hub-mesa.webp" alt="Bancada de refeição com painel de madeira e TV" width="900" height="1200" loading="lazy"></div>
+    <div class="shot"><img src="assets/img/movi-05.webp" alt="Varanda com duas cadeiras e vista para a cidade" width="1200" height="900" loading="lazy"></div>
+    <div class="shot dup"><img src="assets/img/hub-sala.webp" alt="" width="900" height="1200" loading="lazy"></div>
+    <div class="shot dup"><img src="assets/img/movi-04.webp" alt="" width="1200" height="900" loading="lazy"></div>
+    <div class="shot dup"><img src="assets/img/belo-02.webp" alt="" width="1200" height="900" loading="lazy"></div>
+    <div class="shot dup"><img src="assets/img/hub-varanda.webp" alt="" width="1200" height="900" loading="lazy"></div>
+    <div class="shot dup"><img src="assets/img/movi-01.webp" alt="" width="1200" height="900" loading="lazy"></div>
+    <div class="shot dup"><img src="assets/img/belo-09.webp" alt="" width="1200" height="900" loading="lazy"></div>
+    <div class="shot dup"><img src="assets/img/movi-24.webp" alt="" width="1200" height="900" loading="lazy"></div>
+    <div class="shot dup"><img src="assets/img/hub-cozinha.webp" alt="" width="900" height="1200" loading="lazy"></div>
+    <div class="shot dup"><img src="assets/img/belo-14.webp" alt="" width="1200" height="900" loading="lazy"></div>
+    <div class="shot dup"><img src="assets/img/movi-26.webp" alt="" width="1200" height="900" loading="lazy"></div>
+    <div class="shot dup"><img src="assets/img/hub-mesa.webp" alt="" width="900" height="1200" loading="lazy"></div>
+    <div class="shot dup"><img src="assets/img/movi-05.webp" alt="" width="1200" height="900" loading="lazy"></div>
+  </div></div>
+<div class="wrap">
+  <div class="tiles r block">
+    <div class="tile"><div class="v n">90%</div><div class="k">de ocupação em Santo Amaro, agosto de 2026</div></div>
+    <div class="tile"><div class="v n">87%</div><div class="k">de ocupação em Campo Belo, agosto de 2026</div></div>
+    <div class="tile"><div class="v n">4,95</div><div class="k">nota do studio de Santo Amaro, Preferido dos hóspedes</div></div>
+    <div class="tile"><div class="v n">5,0</div><div class="k">em limpeza, check-in e comunicação no mesmo studio</div></div>
+  </div>
+  <p class="src r">Ocupação mediana dos mesmos distritos entre janeiro e setembro de 2026: 55% a 60%, segundo métricas de mercado por distrito. Notas conferidas no Airbnb em 15/10/2026.</p>
+  <p class="rule r">Cuidamos como se fosse nosso, porque também é.</p>
+</div></section>
+
+<section id="equipe"><div class="wrap">
+  <div class="sec-h">
+    <div><p class="eyebrow">Quem cuida</p><h2 class="r">Quem cuida do seu imóvel já cuida dos próprios.</h2></div>
+    <p class="lede"><span class="r">Superhost é o selo que o Airbnb dá a quem mantém nota alta, resposta rápida e zero cancelamento. Os dois à frente da Wisehost têm. Em volta deles, uma equipe que cresce com a carteira.</span></p>
+  </div>
+  <div class="team r block">
+    <div class="pp">
+      <h3>David Uliana</h3>
+      <p class="tag">Superhost · Airbnb e Booking</p>
+      <p>Seis anos hospedando, sete acomodações no ar nas duas plataformas e quase quinhentas avaliações. É quem responde o hóspede, ajusta o preço e cuida do anúncio do seu imóvel todo dia.</p>
+      <p>Engenheiro. Trouxe para a Wisehost o padrão de atendimento que mantém a nota alta: mensagem clara, resposta em até 1 hora, problema resolvido antes de virar avaliação ruim.</p>
+      <div class="stats">
+        <div><div class="v n">481</div><div class="k">avaliações no Airbnb</div></div>
+        <div><div class="v n">4,91</div><div class="k">estrelas em 5</div></div>
+        <div><div class="v n">6</div><div class="k">anos hospedando</div></div>
+      </div>
+      <a class="lk" href="https://www.airbnb.com.br/users/profile/1469669818289103245" target="_blank" rel="noopener">Ver o perfil no Airbnb</a>
+    </div>
+<div class="pp">
+      <h3>Raphael Piotto</h3>
+      <p class="tag">Superhost · CRECI-SP 319841-F</p>
+      <p>Antes de cuidar do imóvel de alguém, comprei os meus. Hoje tenho studios em São Paulo rodando entre os melhores do bairro, e são eles que me ensinaram o que funciona: preço certo na data certa, resposta rápida e um relatório que o dono confere.</p>
+      <p>Oito anos em finanças corporativas, na XP, na AB InBev, na ZX Ventures e na Farmers. Pós em Finanças pela FGV, Administração pela FACAMP. É daí que vem a conta aberta: o seu relatório fecha com o Airbnb à vírgula.</p>
+      <div class="stats">
+        <div><div class="v n">80</div><div class="k">avaliações no Airbnb</div></div>
+        <div><div class="v n">4,83</div><div class="k">estrelas em 5</div></div>
+        <div><div class="v n">100%</div><div class="k">de resposta, em até 1 hora</div></div>
+      </div>
+      <a class="lk" href="https://www.airbnb.com.br/users/profile/1468630129776752098" target="_blank" rel="noopener">Ver o perfil no Airbnb</a>
+    </div>
+    
+  </div>
+<div class="crew r block">
+    <h3>A equipe em volta do seu imóvel</h3>
+    <ul>
+      <li><b>Fotografia</b>Fotógrafo profissional na visita. Seu imóvel no ar em 2 dias, com as fotos que fazem o hóspede clicar.</li>
+      <li><b>Atendimento ao hóspede</b>Das 7h às 23h, resposta em até 1 hora. Você nunca precisa falar com o hóspede.</li>
+      <li><b>Preço e plataforma</b>Software de preço, calendário de eventos, Airbnb e Booking sincronizados.</li>
+      <li><b>Limpeza</b>Equipe própria, treinada no nosso checklist, com reserva para o pico de domingo e segunda. Nota 5,0 no studio de Santo Amaro.</li>
+      <li><b>Manutenção</b>Reparo elétrico, hidráulico e de mobília, reposição e emergência, sem você sair de casa.</li>
+      <li><b>Relatório</b>Fechamento mensal conciliado com o payout, cada despesa com nota, comissão que você recalcula.</li>
+    </ul>
+  </div>
+</div></section>
+
+<section id="metodo"><div class="wrap">
+  <div class="sec-h">
+    <div><p class="eyebrow">Como enchemos</p><h2 class="r">Ocupação de 90% não é sorte. É o que fazemos pelo seu imóvel todo dia.</h2></div>
+    <p class="lede"><span class="r">O que separa um imóvel a 60% de um a 90% é preço certo na data certa, anúncio bem feito e resposta rápida. Você não precisa saber fazer nada disso. É o nosso trabalho.</span></p>
+  </div>
+  <div class="areas r block">
+    <article class="area"><div class="num">01</div><h3>Seu preço muda todo dia, para o seu lado</h3><p>O software ajusta a diária pela demanda do bairro. Fim de semana, feriado e dia de semana têm preços diferentes. Você não deixa dinheiro na mesa nem fica com o imóvel vazio.</p></article>
+    <article class="area"><div class="num">02</div><h3>Evento vale preço de evento</h3><p>F1, Réveillon, Carnaval, shows e feiras entram no calendário com meses de antecedência, com preço mínimo e mínimo de noites. Nenhuma semana de evento do seu imóvel sai a preço de terça.</p></article>
+    <article class="area"><div class="num">03</div><h3>Seu imóvel em duas vitrines</h3><p>Airbnb e Booking, com o calendário sincronizado. Mais gente vendo o seu anúncio, sem risco de reserva dupla.</p></article>
+    <article class="area"><div class="num">04</div><h3>Hóspede respondido em até 1 hora</h3><p>O Airbnb mostra primeiro quem responde rápido. Nossa taxa de resposta é 100%, e isso puxa o seu anúncio para cima.</p></article>
+    <article class="area"><div class="num">05</div><h3>Anúncio de Superhost, com foto de profissional</h3><p>Seu imóvel entra na conta de um Superhost, com fotos feitas por fotógrafo e texto que responde o que o hóspede procura. O selo que ele confere antes de reservar está lá.</p></article>
+    <article class="area"><div class="num">06</div><h3>Nota alta, que segura a ocupação</h3><p>Limpeza com checklist e fotos antes de liberar a senha, check-in sem chave, pedido de avaliação. Nota alta mantém o seu anúncio no topo da busca.</p></article>
+  </div>
+</div></section>
+
+<section class="tint" id="servico"><div class="wrap">
+  <div class="sec-h">
+    <div><p class="eyebrow">O que fica com você</p><h2 class="r">Você recebe, confere e decide. O resto é com a gente.</h2></div>
+    <p class="lede"><span class="r">Um serviço só, do lançamento ao relatório. Sem plano básico ou completo, sem surpresa no meio do caminho.</span></p>
+  </div>
+  <div class="areas r block">
+    <article class="area"><div class="num">01</div><h3>Seu imóvel no ar em 2 dias</h3><p>O fotógrafo visita, a equipe confere enxoval e fechadura, e o anúncio sobe no Airbnb e no Booking em 2 dias. Você não precisa estar presente.</p></article>
+    <article class="area"><div class="num">02</div><h3>Você nunca fala com o hóspede</h3><p>Pedido de documento para a portaria, mensagem de check-in com senha e wi-fi, dúvida de madrugada, problema, dano. Tudo passa pela equipe, das 7h às 23h.</p></article>
+    <article class="area"><div class="num">03</div><h3>Limpeza sem sair do seu bolso</h3><p>O hóspede paga a taxa de limpeza. A nossa equipe limpa com checklist, fotografa o imóvel pronto e só então libera a senha. Enxoval de 3 jogos por cama, sempre.</p></article>
+    <article class="area"><div class="num">04</div><h3>Manutenção resolvida antes de virar problema</h3><p>Vistoria mensal, reposição, reparo elétrico, hidráulico e de mobília. Emergência com gente perto do imóvel. Você fica sabendo pelo relatório, não pela reclamação.</p></article>
+    <article class="area"><div class="num">05</div><h3>O dinheiro cai na sua conta</h3><p>A plataforma paga você direto. A Wisehost nunca recebe o valor cheio. Todo mês chega o relatório com a grade diária, cada despesa com nota e a prova de que o valor da plataforma é a soma das reservas.</p></article>
+    <article class="area"><div class="num">06</div><h3>Protegido antes de começar</h3><p>Lemos a matrícula e a convenção do seu prédio antes de assinar, para o seu imóvel operar sem multa. Contrato simples, sem fidelidade: você sai com 30 dias de aviso.</p></article>
+  </div>
+</div></section>
+
+<section id="hospedes"><div class="wrap">
+  <div class="sec-h">
+    <div><p class="eyebrow">O que os hóspedes dizem</p><h2 class="r">É o hóspede que enche o seu imóvel de novo. Por isso ele volta.</h2></div>
+    <p class="lede"><span class="r">Avaliações públicas dos nossos imóveis no Airbnb, conferidas em 15/10/2026. Passe o mouse para parar.</span></p>
+  </div>
+</div>
+  <div class="marquee r block" aria-label="Avaliações de hóspedes"><div class="track">
+    <figure class="card"><div class="stars">★★★★★</div><p>"Quando chegamos estava tudo muito limpo, organizado e cheiroso. O check-in foi super tranquilo, assim como o checkout. Com certeza voltarei."</p><cite>Bruna · Santo Amaro · set/2026</cite></figure>
+    <figure class="card"><div class="stars">★★★★★</div><p>"Raphael nos mandou mensagens práticas e didáticas sobre o check-in. O apartamento estava super limpo e é muito aconchegante."</p><cite>Thaís · Santo Amaro · ago/2026</cite></figure>
+    <figure class="card"><div class="stars">★★★★★</div><p>"Aconchegante, utensílios ótimos, chuveiro maravilhoso. O anfitrião responde muito rápido, de forma gentil e objetiva."</p><cite>Jennifer · Santo Amaro · ago/2026</cite></figure>
+    <figure class="card"><div class="stars">★★★★★</div><p>"O lugar estava impecável, limpinho, super bem cuidado e cheiroso. Vista linda. Esperamos voltar em breve."</p><cite>Isabela · Santo Amaro · ago/2026</cite></figure>
+    <figure class="card"><div class="stars">★★★★★</div><p>"O local é bonito, organizado, cheiroso, seguro. A estação fica na rua principal, a uma quadra."</p><cite>Ana Paula · Santo Amaro · ago/2026</cite></figure>
+    <figure class="card"><div class="stars">★★★★★</div><p>"Tudo novinho e de muito bom gosto. Precisei entrar de última hora e o anfitrião foi super rápido com as respostas."</p><cite>Joanna · Santo Amaro · jul/2026</cite></figure>
+    <figure class="card dup"><div class="stars">★★★★★</div><p>"Quando chegamos estava tudo muito limpo, organizado e cheiroso. O check-in foi super tranquilo, assim como o checkout. Com certeza voltarei."</p><cite>Bruna · Santo Amaro · set/2026</cite></figure>
+    <figure class="card dup"><div class="stars">★★★★★</div><p>"Raphael nos mandou mensagens práticas e didáticas sobre o check-in. O apartamento estava super limpo e é muito aconchegante."</p><cite>Thaís · Santo Amaro · ago/2026</cite></figure>
+    <figure class="card dup"><div class="stars">★★★★★</div><p>"Aconchegante, utensílios ótimos, chuveiro maravilhoso. O anfitrião responde muito rápido, de forma gentil e objetiva."</p><cite>Jennifer · Santo Amaro · ago/2026</cite></figure>
+    <figure class="card dup"><div class="stars">★★★★★</div><p>"O lugar estava impecável, limpinho, super bem cuidado e cheiroso. Vista linda. Esperamos voltar em breve."</p><cite>Isabela · Santo Amaro · ago/2026</cite></figure>
+    <figure class="card dup"><div class="stars">★★★★★</div><p>"O local é bonito, organizado, cheiroso, seguro. A estação fica na rua principal, a uma quadra."</p><cite>Ana Paula · Santo Amaro · ago/2026</cite></figure>
+    <figure class="card dup"><div class="stars">★★★★★</div><p>"Tudo novinho e de muito bom gosto. Precisei entrar de última hora e o anfitrião foi super rápido com as respostas."</p><cite>Joanna · Santo Amaro · jul/2026</cite></figure>
+  </div></div>
+  <div class="marquee rev" aria-hidden="true"><div class="track">
+    <figure class="card"><div class="stars">★★★★★</div><p>"A estadia foi excelente. O local muito confortável, com tudo necessário. Tudo impecável. Com certeza voltarei."</p><cite>Kauan · Santo Amaro · set/2026</cite></figure>
+    <figure class="card"><div class="stars">★★★★★</div><p>"Apartamento muito aconchegante, limpo, completinho, cama boa, ducha boa. Raphael, excelente anfitrião."</p><cite>Mirian · Santo Amaro · ago/2026</cite></figure>
+    <figure class="card"><div class="stars">★★★★★</div><p>"A casa tem tudo que a gente precisa. Roupas de cama e toalhas bem limpinhas. David foi um excelente anfitrião."</p><cite>Cristiane · acomodação do David · ago/2026</cite></figure>
+    <figure class="card"><div class="stars">★★★★★</div><p>"Apartamento muito bom e com uma vista linda."</p><cite>Pedro · Santo Amaro · out/2026</cite></figure>
+    <figure class="card"><div class="stars">★★★★★</div><p>"Adoramos nossa estadia, lugar agradável. O apartamento muito aconchegante e limpo. Com certeza voltaremos em breve."</p><cite>Pablo · Santo Amaro · jul/2026</cite></figure>
+    <figure class="card"><div class="stars">★★★★☆</div><p>"Tranquila, a localização era perfeita, comércio e transporte muito próximos."</p><cite>Luciana · Santo Amaro · out/2026</cite></figure>
+    <figure class="card"><div class="stars">★★★★★</div><p>"Muito boa a casa, tranquilo o bairro, recomendo."</p><cite>Estevão · acomodação do David · ago/2026</cite></figure>
+    <figure class="card dup"><div class="stars">★★★★★</div><p>"A estadia foi excelente. O local muito confortável, com tudo necessário. Tudo impecável. Com certeza voltarei."</p><cite>Kauan · Santo Amaro · set/2026</cite></figure>
+    <figure class="card dup"><div class="stars">★★★★★</div><p>"Apartamento muito aconchegante, limpo, completinho, cama boa, ducha boa. Raphael, excelente anfitrião."</p><cite>Mirian · Santo Amaro · ago/2026</cite></figure>
+    <figure class="card dup"><div class="stars">★★★★★</div><p>"A casa tem tudo que a gente precisa. Roupas de cama e toalhas bem limpinhas. David foi um excelente anfitrião."</p><cite>Cristiane · acomodação do David · ago/2026</cite></figure>
+    <figure class="card dup"><div class="stars">★★★★★</div><p>"Apartamento muito bom e com uma vista linda."</p><cite>Pedro · Santo Amaro · out/2026</cite></figure>
+    <figure class="card dup"><div class="stars">★★★★★</div><p>"Adoramos nossa estadia, lugar agradável. O apartamento muito aconchegante e limpo. Com certeza voltaremos em breve."</p><cite>Pablo · Santo Amaro · jul/2026</cite></figure>
+    <figure class="card dup"><div class="stars">★★★★☆</div><p>"Tranquila, a localização era perfeita, comércio e transporte muito próximos."</p><cite>Luciana · Santo Amaro · out/2026</cite></figure>
+    <figure class="card dup"><div class="stars">★★★★★</div><p>"Muito boa a casa, tranquilo o bairro, recomendo."</p><cite>Estevão · acomodação do David · ago/2026</cite></figure>
+  </div></div>
+</section>
+
+<section class="tint" id="como-comeca"><div class="wrap">
+  <div class="sec-h">
+    <div><p class="eyebrow">Como começa</p><h2 class="r">Uma conversa, uma visita, e o seu imóvel no ar.</h2></div>
+    <p class="lede"><span class="r">Você não precisa saber nada de Airbnb. Manda o endereço, a gente faz o resto e mostra a conta antes de você decidir.</span></p>
+  </div>
+  <ol class="steps r block">
+    <li><h3>Você manda o endereço</h3><p>Pelo WhatsApp, com o link do anúncio se já tiver um. Em 48 horas você recebe a projeção de diária, ocupação e receita do seu imóvel.</p></li>
+    <li><h3>Reunião com a conta aberta</h3><p>Mostramos os números dos nossos studios, o que o seu imóvel precisa para chegar lá e a proposta para o seu caso. Checamos matrícula e convenção para você operar sem multa.</p></li>
+    <li><h3>Fotógrafo, anúncio, primeiro hóspede</h3><p>Visita com o fotógrafo, enxoval e fechadura conferidos, anúncio no ar em 2 dias. O primeiro relatório chega no fechamento do mês.</p></li>
+  </ol>
+</div></section>
+
+<section id="perguntas"><div class="wrap">
+  <div class="sec-h">
+    <div><p class="eyebrow">Perguntas</p><h2 class="r">O que todo dono pergunta antes de assinar.</h2></div>
+  </div>
+  <div class="faq r block">
+    <details><summary>O dinheiro passa pela Wisehost?</summary><p>Não. A plataforma paga você, na sua conta. A Wisehost emite nota só da comissão, depois que o relatório do mês fecha.</p></details>
+    <details><summary>Quanto custa?</summary><p>Cada imóvel tem uma proposta, feita depois da projeção. Na primeira reunião você vê a conta inteira, com os números dos nossos próprios studios ao lado.</p></details>
+    <details><summary>Quem paga a faxina?</summary><p>O hóspede, na taxa de limpeza de cada estadia. No seu relatório ela aparece separada, com faxina, produtos e lavanderia.</p></details>
+    <details><summary>Em quanto tempo meu imóvel fica no ar?</summary><p>Dois dias depois da visita do fotógrafo, com o anúncio no Airbnb e no Booking sincronizados.</p></details>
+    <details><summary>Vocês atendem o meu bairro?</summary><p>Atendemos toda a cidade de São Paulo. Nossos studios ficam na zona sul, e a equipe de campo atende por região. Mande o endereço e respondemos em 48 horas.</p></details>
+    <details><summary>E se o hóspede quebrar alguma coisa?</summary><p>Abrimos o pedido na plataforma com as fotos da vistoria de saída. A equipe de manutenção repõe, e o custo sai no relatório com nota.</p></details>
+    <details><summary>Meu prédio permite Airbnb?</summary><p>Lemos a convenção e o regimento antes de assinar, e checamos a matrícula. É o que protege você de multa e de briga com o condomínio.</p></details>
+    <details><summary>Tem fidelidade?</summary><p>Não. Você sai com 30 dias de aviso, e o anúncio, as avaliações e a fechadura vão com você.</p></details>
+  </div>
+</div></section>
+
+<section class="contact" id="contato"><div class="wrap">
+  <div class="head">
+    <p class="eyebrow">Contato</p>
+    <h2 class="r">Mande o endereço do seu imóvel. A equipe responde em 48 horas.</h2>
+    <p class="lede"><span class="r">Com o link do anúncio, se já tiver. A projeção do seu imóvel vem junto com a resposta.</span></p>
+  </div>
+  <dl class="ct">
+    <div class="row"><dt>WhatsApp</dt><dd><a href="https://wa.me/5511955788880?text=Oi%2C%20vim%20pelo%20site%20da%20Wisehost.%20Tenho%20um%20im%C3%B3vel%20em%20%5Bbairro%5D%20e%20quero%20conversar%20sobre%20a%20gest%C3%A3o." target="_blank" rel="noopener">+55 11 95578-8880</a><small>David Uliana. Resposta em horário comercial</small></dd></div>
+    <div class="row"><dt>E-mail</dt><dd><a href="mailto:contato@wisekey.co">contato@wisekey.co</a><small>Quem responde: Raphael Piotto, sócio</small></dd></div>
+    <div class="row"><dt>Atendemos</dt><dd>Toda a cidade de São Paulo<small>Equipe de campo por região. Studios próprios na zona sul</small></dd></div>
+    <div class="row"><dt>Instagram</dt><dd><a href="https://www.instagram.com/wisehost.serra/" target="_blank" rel="noopener">@wisehost.serra</a></dd></div>
+  </dl>
+</div></section>
+
+<section class="close dark"><div class="wrap">
+  <p class="sigline">Seu imóvel em boas mãos. Sua conta, aberta.</p>
+  <h2 class="r">Seu imóvel rendendo, sem tomar o seu tempo.</h2>
+  <a class="btn solid" href="https://wa.me/5511955788880?text=Oi%2C%20vim%20pelo%20site%20da%20Wisehost.%20Tenho%20um%20im%C3%B3vel%20em%20%5Bbairro%5D%20e%20quero%20conversar%20sobre%20a%20gest%C3%A3o." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#wa"/></svg>Falar com a equipe</a>
+</div></section>
+
+</main>
+
+<footer><div class="wrap in">
+  <div>
+    <img src="assets/img/wisehost-logo-branco.svg" alt="Wisehost" width="198" height="32" loading="lazy">
+    <div class="links">
+      <a href="https://wa.me/5511955788880" target="_blank" rel="noopener">WhatsApp</a>
+      <a href="mailto:contato@wisekey.co">E-mail</a>
+      <a href="https://www.instagram.com/wisehost.serra/" target="_blank" rel="noopener">Instagram</a>
+    </div>
+  </div>
+  <div class="legal">Wisehost, uma marca Wisekey<br>Wisekey Estratégia e Assessoria Ltda · CNPJ 58.501.287/0001-13 · CRECI-SP 054559-J<br>Responsável técnico Raphael Piotto Cardoso, CRECI-SP 319841-F<br>Números de ocupação e avaliações são resultados passados dos nossos imóveis e não garantem resultado futuro.</div>
+</div></footer>
+
+</body>
+</html>

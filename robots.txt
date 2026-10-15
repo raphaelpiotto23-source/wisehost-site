@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://wisehost.com.br/sitemap.xml
