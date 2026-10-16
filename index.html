@@ -56,7 +56,7 @@ Tipo: Poppins em tudo, como o manual v1 revisto em 15/10: 600 título e número 
 Cor: tinta #1C1830 sobre branco (pedido do Raphael em 15/10: site claro, leve de ler) · navy #2D1E80 em título, topo, fecho e rodapé · lilás #F4F2FD de superfície · roxo #5851D9 só na dupla régua
 Espaço: 4/8/12/16/24/32/48/64 · seção 96px desktop, 48px celular · raios 6/12/24
 Assinatura: a dupla régua do contador embaixo de um único número por bloco
-Lógica do funil: header → hero (o que o dono ganha + prova) → nossos studios (fotos andando + ocupação) → quem cuida (equipe Superhost + Raphael) → como enchemos → o que fica com você → hóspedes (avaliações andando) → como começa → perguntas → contato → fecho → rodapé
+Lógica do funil: header → hero (o que o proprietário ganha + prova) → nossos studios (fotos andando + ocupação) → quem cuida (equipe Superhost + Raphael) → como enchemos → o que fica com você → hóspedes (avaliações andando) → como começa → perguntas → contato → fecho → rodapé
 Revisão: textos novos com class="r"; <body class="revisao"> mostra [RASCUNHO]. Publicar sem a classe. Site institucional: sem preço.
 Movimento: só CSS (keyframes em transform), pausa no hover, desliga em prefers-reduced-motion.
 */
@@ -145,15 +145,18 @@ section{padding-block:clamp(48px,8vw,96px)}
 /* faixas em movimento */
 .marquee{overflow:hidden;margin-top:48px;-webkit-mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent);mask-image:linear-gradient(90deg,transparent,#000 6%,#000 94%,transparent)}
 .marquee+.marquee{margin-top:16px}
-.track{display:flex;gap:16px;width:max-content;animation:slide 60s linear infinite}
+.track{display:flex;gap:0;width:max-content;animation:slide 60s linear infinite}
 .marquee.rev .track{animation-direction:reverse;animation-duration:75s}
-.marquee.slow .track{animation-duration:90s}
+.marquee.slow .track{animation-duration:55s}
 .marquee:hover .track{animation-play-state:paused}
 @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-.shot{flex:none;width:420px;aspect-ratio:4/3;overflow:hidden;border-radius:12px;background:var(--surface)}
+.shot{flex:none;width:420px;margin-right:16px;aspect-ratio:4/3;overflow:hidden;border-radius:12px;background:var(--surface)}
+.shot{position:relative}
 .shot img{width:100%;height:100%;object-fit:cover;display:block}
+.shot .selo{position:absolute;left:12px;bottom:12px;background:rgba(255,255,255,.94);color:var(--navy);font-size:12px;font-weight:600;letter-spacing:.02em;padding:6px 10px;border-radius:6px;display:inline-flex;align-items:center;gap:6px}
+.shot .selo::before{content:"";width:8px;height:8px;border-radius:50%;background:#FF385C}
 @media (max-width:720px){.shot{width:280px}}
-.card{flex:none;width:340px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px 24px}
+.card{flex:none;width:340px;margin-right:16px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px 24px}
 @media (max-width:720px){.card{width:280px}}
 .card .stars{font-size:12px;color:var(--navy);letter-spacing:.14em}
 .card p{margin-top:10px;font-size:16px;color:var(--ink);line-height:1.5}
@@ -288,48 +291,48 @@ footer .legal{font-size:12.5px;line-height:1.8;text-align:right;max-width:60ch}
 <section class="tint" id="studios"><div class="wrap">
   <div class="sec-h">
     <div><p class="eyebrow">Nossos studios</p><h2 class="r">Antes de cuidar do seu, cuidamos dos nossos. Olhe como eles estão.</h2></div>
-    <p class="lede"><span class="r">Imóveis próprios da equipe em São Paulo: studios em Santo Amaro, Campo Belo e Alto da Boa Vista e o apartamento do David. Os números abaixo são dos relatórios do mês. O seu imóvel recebe o mesmo padrão, da fotografia ao relatório.</span></p>
+    <p class="lede"><span class="r">Imóveis próprios da equipe em São Paulo: studios em Santo Amaro, Campo Belo e Alto da Boa Vista e um apartamento em Higienópolis. Os números abaixo são dos relatórios do mês. O seu imóvel recebe o mesmo padrão, da fotografia ao relatório.</span></p>
   </div>
 </div>
   <div class="marquee slow r block" aria-label="Fotos dos nossos studios"><div class="track">
-    <div class="shot"><img src="assets/img/david-01.webp" alt="Varanda envidraçada do apartamento do David ao pôr do sol, com vista para os prédios de São Paulo" width="1200" height="900" loading="lazy"></div>
-    <div class="shot"><img src="assets/img/hub-sala.webp" alt="Studio em Santo Amaro: cama de casal, bancada e janela para a cidade" width="900" height="1200" loading="lazy"></div>
-    <div class="shot"><img src="assets/img/david-02.webp" alt="Sala do apartamento do David com piso de madeira, plantas e vista para a cidade" width="720" height="540" loading="lazy"></div>
-    <div class="shot"><img src="assets/img/movi-04.webp" alt="Vista do studio em Campo Belo sobre os prédios da zona sul" width="1200" height="900" loading="lazy"></div>
-    <div class="shot"><img src="assets/img/david-04.webp" alt="Pôr do sol sobre São Paulo visto da varanda do apartamento do David" width="1200" height="675" loading="lazy"></div>
-    <div class="shot"><img src="assets/img/belo-02.webp" alt="Studio no Alto da Boa Vista: cama arrumada com manta azul e janela" width="1200" height="900" loading="lazy"></div>
-    <div class="shot"><img src="assets/img/david-05.webp" alt="Quarto do apartamento do David com cama de casal e janela para a cidade" width="1200" height="675" loading="lazy"></div>
-    <div class="shot"><img src="assets/img/hub-varanda.webp" alt="Varanda do studio com duas poltronas e vista para São Paulo" width="1200" height="900" loading="lazy"></div>
-    <div class="shot"><img src="assets/img/david-07.webp" alt="Sofá da varanda do apartamento do David com o céu lilás no fim da tarde" width="1200" height="675" loading="lazy"></div>
-    <div class="shot"><img src="assets/img/movi-01.webp" alt="Cama de casal pronta para o hóspede no studio de Campo Belo" width="1200" height="900" loading="lazy"></div>
-    <div class="shot"><img src="assets/img/david-08.webp" alt="Cozinha e mesa de jantar do apartamento do David" width="720" height="540" loading="lazy"></div>
-    <div class="shot"><img src="assets/img/belo-09.webp" alt="Cozinha compacta com cooktop e armários claros" width="1200" height="900" loading="lazy"></div>
-    <div class="shot"><img src="assets/img/david-10.webp" alt="Varanda do apartamento do David em dia de sol" width="720" height="480" loading="lazy"></div>
-    <div class="shot"><img src="assets/img/movi-24.webp" alt="Piscina do condomínio em Campo Belo" width="1200" height="900" loading="lazy"></div>
-    <div class="shot"><img src="assets/img/hub-cozinha.webp" alt="Cozinha com geladeira inox e cooktop" width="900" height="1200" loading="lazy"></div>
-    <div class="shot"><img src="assets/img/belo-14.webp" alt="Bancada com duas banquetas e TV" width="1200" height="900" loading="lazy"></div>
-    <div class="shot"><img src="assets/img/movi-26.webp" alt="Academia do condomínio em Campo Belo" width="1200" height="900" loading="lazy"></div>
-    <div class="shot"><img src="assets/img/hub-mesa.webp" alt="Bancada de refeição com painel de madeira e TV" width="900" height="1200" loading="lazy"></div>
-    <div class="shot"><img src="assets/img/movi-05.webp" alt="Varanda com duas cadeiras e vista para a cidade" width="1200" height="900" loading="lazy"></div>
-    <div class="shot dup"><img src="assets/img/david-01.webp" alt="" width="1200" height="900" loading="lazy"></div>
-    <div class="shot dup"><img src="assets/img/hub-sala.webp" alt="" width="900" height="1200" loading="lazy"></div>
-    <div class="shot dup"><img src="assets/img/david-02.webp" alt="" width="720" height="540" loading="lazy"></div>
-    <div class="shot dup"><img src="assets/img/movi-04.webp" alt="" width="1200" height="900" loading="lazy"></div>
-    <div class="shot dup"><img src="assets/img/david-04.webp" alt="" width="1200" height="675" loading="lazy"></div>
-    <div class="shot dup"><img src="assets/img/belo-02.webp" alt="" width="1200" height="900" loading="lazy"></div>
-    <div class="shot dup"><img src="assets/img/david-05.webp" alt="" width="1200" height="675" loading="lazy"></div>
-    <div class="shot dup"><img src="assets/img/hub-varanda.webp" alt="" width="1200" height="900" loading="lazy"></div>
-    <div class="shot dup"><img src="assets/img/david-07.webp" alt="" width="1200" height="675" loading="lazy"></div>
-    <div class="shot dup"><img src="assets/img/movi-01.webp" alt="" width="1200" height="900" loading="lazy"></div>
-    <div class="shot dup"><img src="assets/img/david-08.webp" alt="" width="720" height="540" loading="lazy"></div>
-    <div class="shot dup"><img src="assets/img/belo-09.webp" alt="" width="1200" height="900" loading="lazy"></div>
-    <div class="shot dup"><img src="assets/img/david-10.webp" alt="" width="720" height="480" loading="lazy"></div>
-    <div class="shot dup"><img src="assets/img/movi-24.webp" alt="" width="1200" height="900" loading="lazy"></div>
-    <div class="shot dup"><img src="assets/img/hub-cozinha.webp" alt="" width="900" height="1200" loading="lazy"></div>
-    <div class="shot dup"><img src="assets/img/belo-14.webp" alt="" width="1200" height="900" loading="lazy"></div>
-    <div class="shot dup"><img src="assets/img/movi-26.webp" alt="" width="1200" height="900" loading="lazy"></div>
-    <div class="shot dup"><img src="assets/img/hub-mesa.webp" alt="" width="900" height="1200" loading="lazy"></div>
-    <div class="shot dup"><img src="assets/img/movi-05.webp" alt="" width="1200" height="900" loading="lazy"></div>
+    <div class="shot"><img src="assets/img/david-01.webp" alt="Varanda envidraçada do apartamento em Higienópolis ao pôr do sol, com vista para os prédios de São Paulo" width="1200" height="900" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot"><img src="assets/img/hub-sala.webp" alt="Studio em Santo Amaro: cama de casal, bancada e janela para a cidade" width="900" height="1200" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot"><img src="assets/img/david-02.webp" alt="Sala do apartamento em Higienópolis com piso de madeira, plantas e vista para a cidade" width="720" height="540" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot"><img src="assets/img/movi-04.webp" alt="Vista do studio em Campo Belo sobre os prédios da zona sul" width="1200" height="900" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot"><img src="assets/img/david-04.webp" alt="Pôr do sol sobre São Paulo visto da varanda do apartamento em Higienópolis" width="1200" height="675" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot"><img src="assets/img/belo-02.webp" alt="Studio no Alto da Boa Vista: cama arrumada com manta azul e janela" width="1200" height="900" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot"><img src="assets/img/david-05.webp" alt="Quarto do apartamento em Higienópolis com cama de casal e janela para a cidade" width="1200" height="675" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot"><img src="assets/img/hub-varanda.webp" alt="Varanda do studio com duas poltronas e vista para São Paulo" width="1200" height="900" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot"><img src="assets/img/david-07.webp" alt="Sofá da varanda do apartamento em Higienópolis com o céu lilás no fim da tarde" width="1200" height="675" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot"><img src="assets/img/movi-01.webp" alt="Cama de casal pronta para o hóspede no studio de Campo Belo" width="1200" height="900" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot"><img src="assets/img/david-08.webp" alt="Cozinha e mesa de jantar do apartamento em Higienópolis" width="720" height="540" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot"><img src="assets/img/belo-09.webp" alt="Cozinha compacta com cooktop e armários claros" width="1200" height="900" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot"><img src="assets/img/david-10.webp" alt="Varanda do apartamento em Higienópolis em dia de sol" width="720" height="480" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot"><img src="assets/img/movi-24.webp" alt="Piscina do condomínio em Campo Belo" width="1200" height="900" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot"><img src="assets/img/hub-cozinha.webp" alt="Cozinha com geladeira inox e cooktop" width="900" height="1200" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot"><img src="assets/img/belo-14.webp" alt="Bancada com duas banquetas e TV" width="1200" height="900" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot"><img src="assets/img/movi-26.webp" alt="Academia do condomínio em Campo Belo" width="1200" height="900" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot"><img src="assets/img/hub-mesa.webp" alt="Bancada de refeição com painel de madeira e TV" width="900" height="1200" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot"><img src="assets/img/movi-05.webp" alt="Varanda com duas cadeiras e vista para a cidade" width="1200" height="900" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot dup"><img src="assets/img/david-01.webp" alt="" width="1200" height="900" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot dup"><img src="assets/img/hub-sala.webp" alt="" width="900" height="1200" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot dup"><img src="assets/img/david-02.webp" alt="" width="720" height="540" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot dup"><img src="assets/img/movi-04.webp" alt="" width="1200" height="900" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot dup"><img src="assets/img/david-04.webp" alt="" width="1200" height="675" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot dup"><img src="assets/img/belo-02.webp" alt="" width="1200" height="900" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot dup"><img src="assets/img/david-05.webp" alt="" width="1200" height="675" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot dup"><img src="assets/img/hub-varanda.webp" alt="" width="1200" height="900" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot dup"><img src="assets/img/david-07.webp" alt="" width="1200" height="675" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot dup"><img src="assets/img/movi-01.webp" alt="" width="1200" height="900" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot dup"><img src="assets/img/david-08.webp" alt="" width="720" height="540" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot dup"><img src="assets/img/belo-09.webp" alt="" width="1200" height="900" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot dup"><img src="assets/img/david-10.webp" alt="" width="720" height="480" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot dup"><img src="assets/img/movi-24.webp" alt="" width="1200" height="900" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot dup"><img src="assets/img/hub-cozinha.webp" alt="" width="900" height="1200" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot dup"><img src="assets/img/belo-14.webp" alt="" width="1200" height="900" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot dup"><img src="assets/img/movi-26.webp" alt="" width="1200" height="900" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot dup"><img src="assets/img/hub-mesa.webp" alt="" width="900" height="1200" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
+    <div class="shot dup"><img src="assets/img/movi-05.webp" alt="" width="1200" height="900" loading="lazy"><span class="selo">Superhost · Airbnb</span></div>
   </div></div>
 <div class="wrap">
   <div class="tiles r block">
@@ -362,7 +365,7 @@ footer .legal{font-size:12.5px;line-height:1.8;text-align:right;max-width:60ch}
 <div class="pp">
       <h3>Raphael Piotto</h3>
       <p class="tag">Superhost · CRECI-SP 319841-F</p>
-      <p>Antes de cuidar do imóvel de alguém, comprei os meus. Hoje tenho studios em São Paulo rodando entre os melhores do bairro, e são eles que me ensinaram o que funciona: preço certo na data certa, resposta rápida e um relatório que o dono confere.</p>
+      <p>Antes de cuidar do imóvel de alguém, comprei os meus. Hoje tenho studios em São Paulo rodando entre os melhores do bairro, e são eles que me ensinaram o que funciona: preço certo na data certa, resposta rápida e um relatório que o proprietário confere.</p>
       <p>Oito anos em finanças corporativas, na XP, na AB InBev, na ZX Ventures e na Farmers. Pós em Finanças pela FGV, Administração pela FACAMP. É daí que vem a conta aberta: o seu relatório fecha com o Airbnb à vírgula.</p>
       <div class="stats">
         <div><div class="v n">80</div><div class="k">avaliações no Airbnb</div></div>
@@ -379,8 +382,8 @@ footer .legal{font-size:12.5px;line-height:1.8;text-align:right;max-width:60ch}
       <li><b>Fotografia</b>Fotógrafo profissional na visita. Seu imóvel no ar em 2 dias, com as fotos que fazem o hóspede clicar.</li>
       <li><b>Atendimento ao hóspede</b>Das 7h às 23h, resposta em até 1 hora. Você nunca precisa falar com o hóspede.</li>
       <li><b>Preço e plataforma</b>Software de preço, calendário de eventos, Airbnb e Booking sincronizados.</li>
-      <li><b>Limpeza</b>Equipe própria, treinada no nosso checklist, com reserva para o pico de domingo e segunda. Nota 5,0 no studio de Santo Amaro. Enxoval e produtos por conta do dono.</li>
-      <li><b>Manutenção</b>Reparo elétrico, hidráulico e de mobília e emergência, sem você sair de casa. Material por sua conta, com nota no relatório.</li>
+      <li><b>Limpeza</b>Equipe própria, treinada no nosso checklist, com reserva para o pico de domingo e segunda. Nota 5,0 no studio de Santo Amaro. Enxoval e produtos por conta do proprietário.</li>
+      <li><b>Manutenção</b>Vistoria, pequeno reparo e emergência pela equipe. Profissional especializado e material são por conta do proprietário, a preço de custo, com nota.</li>
       <li><b>Relatório</b>Fechamento mensal conciliado com o payout, cada despesa com nota, comissão que você recalcula.</li>
     </ul>
   </div>
@@ -404,13 +407,13 @@ footer .legal{font-size:12.5px;line-height:1.8;text-align:right;max-width:60ch}
 <section class="tint" id="servico"><div class="wrap">
   <div class="sec-h">
     <div><p class="eyebrow">O que fica com você</p><h2 class="r">Você recebe, confere e decide. O resto é com a gente.</h2></div>
-    <p class="lede"><span class="r">Um serviço só, do lançamento ao relatório. Sem plano básico ou completo, sem surpresa no meio do caminho. E com a conta clara desde o início: a Wisehost entra com a equipe, o software e o trabalho; o imóvel, o enxoval, os produtos e o material de manutenção são do dono, lançados no relatório com nota.</span></p>
+    <p class="lede"><span class="r">Um serviço só, do lançamento ao relatório. Sem plano básico ou completo, sem surpresa no meio do caminho. E com a conta clara desde o início: a Wisehost entra com a equipe, o software e o trabalho; o imóvel, o enxoval, os produtos e o material de manutenção são do proprietário, lançados no relatório com nota.</span></p>
   </div>
   <div class="areas r block">
     <article class="area"><div class="num">01</div><h3>Seu imóvel no ar em 2 dias</h3><p>O fotógrafo visita, a equipe confere o imóvel e a fechadura, e o anúncio sobe no Airbnb e no Booking em 2 dias. Você não precisa estar presente.</p></article>
     <article class="area"><div class="num">02</div><h3>Você nunca fala com o hóspede</h3><p>Pedido de documento para a portaria, mensagem de check-in com senha e wi-fi, dúvida de madrugada, problema, dano. Tudo passa pela equipe, das 7h às 23h.</p></article>
     <article class="area"><div class="num">03</div><h3>Limpeza sem sair do seu bolso</h3><p>O hóspede paga a taxa de limpeza, que cobre a diarista e a lavanderia. A nossa equipe limpa com checklist, fotografa o imóvel pronto e só então libera a senha. Enxoval e produtos de reposição são por sua conta, comprados a preço de custo e lançados no relatório com nota.</p></article>
-    <article class="area"><div class="num">04</div><h3>Manutenção resolvida antes de virar problema</h3><p>Vistoria mensal, reparo elétrico, hidráulico e de mobília, emergência com gente perto do imóvel. A equipe resolve; o custo do reparo é seu e sai no relatório, com nota.</p></article>
+    <article class="area"><div class="num">04</div><h3>Manutenção resolvida antes de virar problema</h3><p>Vistoria mensal, pequeno reparo e emergência com gente perto do imóvel: isso a equipe faz, sem custo extra. Quando precisa de profissional especializado (eletricista, encanador, técnico de ar-condicionado), a Wisehost contrata e acompanha, e o serviço é cobrado de você a preço de custo, com nota no relatório.</p></article>
     <article class="area"><div class="num">05</div><h3>O dinheiro cai na sua conta</h3><p>A plataforma paga você direto. A Wisehost nunca recebe o valor cheio. Todo mês chega o relatório com a grade diária, cada despesa com nota e a prova de que o valor da plataforma é a soma das reservas.</p></article>
     <article class="area"><div class="num">06</div><h3>Protegido antes de começar</h3><p>Lemos a matrícula e a convenção do seu prédio antes de assinar, para o seu imóvel operar sem multa. Contrato simples, sem fidelidade: você sai com 30 dias de aviso.</p></article>
   </div>
@@ -419,58 +422,58 @@ footer .legal{font-size:12.5px;line-height:1.8;text-align:right;max-width:60ch}
 <section id="hospedes"><div class="wrap">
   <div class="sec-h">
     <div><p class="eyebrow">O que os hóspedes dizem</p><h2 class="r">É o hóspede que enche o seu imóvel de novo. Por isso ele volta.</h2></div>
-    <p class="lede"><span class="r">Avaliações dos nossos imóveis no Airbnb: os studios e o apartamento do David. Conferidas em 15/10/2026. Passe o mouse para parar.</span></p>
+    <p class="lede"><span class="r">Avaliações dos nossos imóveis no Airbnb: os studios e o apartamento em Higienópolis. Conferidas em 15/10/2026. Passe o mouse para parar.</span></p>
   </div>
 </div>
   <div class="marquee r block" aria-label="Avaliações de hóspedes"><div class="track">
-        <figure class="card"><div class="stars">★★★★★</div><p>"David muito solícito e gentil, a casa impecável, maravilhosa. Tudo muito bonito, organizado, limpo, não nos faltou nada. Vizinhança tranquila. Casa com cara de lar."</p><cite>Hóspede · acomodação do David</cite></figure>
-    <figure class="card"><div class="stars">★★★★★</div><p>"Casa aconchegante, limpa, ótima localização. Igual às fotos do anúncio. David me atendeu rapidamente e tirou as dúvidas. Voltaria novamente, com certeza."</p><cite>Hóspede · acomodação do David</cite></figure>
+        <figure class="card"><div class="stars">★★★★★</div><p>"David muito solícito e gentil, a casa impecável, maravilhosa. Tudo muito bonito, organizado, limpo, não nos faltou nada. Vizinhança tranquila. Casa com cara de lar."</p><cite>Hóspede · apartamento em Higienópolis</cite></figure>
+    <figure class="card"><div class="stars">★★★★★</div><p>"Casa aconchegante, limpa, ótima localização. Igual às fotos do anúncio. David me atendeu rapidamente e tirou as dúvidas. Voltaria novamente, com certeza."</p><cite>Hóspede · apartamento em Higienópolis</cite></figure>
     <figure class="card"><div class="stars">★★★★★</div><p>"Quando chegamos estava tudo muito limpo, organizado e cheiroso. O check-in foi super tranquilo, assim como o checkout. Com certeza voltarei."</p><cite>Bruna · Santo Amaro · set/2026</cite></figure>
     <figure class="card"><div class="stars">★★★★★</div><p>"Raphael nos mandou mensagens práticas e didáticas sobre o check-in. O apartamento estava super limpo e é muito aconchegante."</p><cite>Thaís · Santo Amaro · ago/2026</cite></figure>
     <figure class="card"><div class="stars">★★★★★</div><p>"Aconchegante, utensílios ótimos, chuveiro maravilhoso. O anfitrião responde muito rápido, de forma gentil e objetiva."</p><cite>Jennifer · Santo Amaro · ago/2026</cite></figure>
     <figure class="card"><div class="stars">★★★★★</div><p>"O lugar estava impecável, limpinho, super bem cuidado e cheiroso. Vista linda. Esperamos voltar em breve."</p><cite>Isabela · Santo Amaro · ago/2026</cite></figure>
     <figure class="card"><div class="stars">★★★★★</div><p>"O local é bonito, organizado, cheiroso, seguro. A estação fica na rua principal, a uma quadra."</p><cite>Ana Paula · Santo Amaro · ago/2026</cite></figure>
     <figure class="card"><div class="stars">★★★★★</div><p>"Tudo novinho e de muito bom gosto. Precisei entrar de última hora e o anfitrião foi super rápido com as respostas."</p><cite>Joanna · Santo Amaro · jul/2026</cite></figure>
-        <figure class="card"><div class="stars">★★★★★</div><p>"Um lugar incrível. Passamos dias muito bons lá. O David nos respondia sempre na hora. Voltaremos com certeza."</p><cite>Patrick · apartamento do David · out/2025</cite></figure>
-    <figure class="card"><div class="stars">★★★★★</div><p>"Adoramos o local, estava muito limpo e organizado. Tudo exatamente igual às fotos, e ele responde muito rápido."</p><cite>Maria Antonieta · apartamento do David · ago/2025</cite></figure>
-    <figure class="card"><div class="stars">★★★★★</div><p>"O espaço do David é maravilhoso e com certeza tem a vista mais bonita da cidade."</p><cite>Fernando · apartamento do David · jun/2025</cite></figure>
-    <figure class="card"><div class="stars">★★★★★</div><p>"Cobertura aconchegante, anfitrião excelente, sempre pronto para responder e atender o hóspede. Instruções claras do apartamento."</p><cite>Hóspede · apartamento do David · jan/2023</cite></figure>
-    <figure class="card dup"><div class="stars">★★★★★</div><p>"David muito solícito e gentil, a casa impecável, maravilhosa. Tudo muito bonito, organizado, limpo, não nos faltou nada. Vizinhança tranquila. Casa com cara de lar."</p><cite>Hóspede · acomodação do David</cite></figure>
-    <figure class="card dup"><div class="stars">★★★★★</div><p>"Casa aconchegante, limpa, ótima localização. Igual às fotos do anúncio. David me atendeu rapidamente e tirou as dúvidas. Voltaria novamente, com certeza."</p><cite>Hóspede · acomodação do David</cite></figure>
+        <figure class="card"><div class="stars">★★★★★</div><p>"Um lugar incrível. Passamos dias muito bons lá. O David nos respondia sempre na hora. Voltaremos com certeza."</p><cite>Patrick · apartamento em Higienópolis · out/2025</cite></figure>
+    <figure class="card"><div class="stars">★★★★★</div><p>"Adoramos o local, estava muito limpo e organizado. Tudo exatamente igual às fotos, e ele responde muito rápido."</p><cite>Maria Antonieta · apartamento em Higienópolis · ago/2025</cite></figure>
+    <figure class="card"><div class="stars">★★★★★</div><p>"O espaço do David é maravilhoso e com certeza tem a vista mais bonita da cidade."</p><cite>Fernando · apartamento em Higienópolis · jun/2025</cite></figure>
+    <figure class="card"><div class="stars">★★★★★</div><p>"Cobertura aconchegante, anfitrião excelente, sempre pronto para responder e atender o hóspede. Instruções claras do apartamento."</p><cite>Hóspede · apartamento em Higienópolis · jan/2023</cite></figure>
+    <figure class="card dup"><div class="stars">★★★★★</div><p>"David muito solícito e gentil, a casa impecável, maravilhosa. Tudo muito bonito, organizado, limpo, não nos faltou nada. Vizinhança tranquila. Casa com cara de lar."</p><cite>Hóspede · apartamento em Higienópolis</cite></figure>
+    <figure class="card dup"><div class="stars">★★★★★</div><p>"Casa aconchegante, limpa, ótima localização. Igual às fotos do anúncio. David me atendeu rapidamente e tirou as dúvidas. Voltaria novamente, com certeza."</p><cite>Hóspede · apartamento em Higienópolis</cite></figure>
     <figure class="card dup"><div class="stars">★★★★★</div><p>"Quando chegamos estava tudo muito limpo, organizado e cheiroso. O check-in foi super tranquilo, assim como o checkout. Com certeza voltarei."</p><cite>Bruna · Santo Amaro · set/2026</cite></figure>
     <figure class="card dup"><div class="stars">★★★★★</div><p>"Raphael nos mandou mensagens práticas e didáticas sobre o check-in. O apartamento estava super limpo e é muito aconchegante."</p><cite>Thaís · Santo Amaro · ago/2026</cite></figure>
     <figure class="card dup"><div class="stars">★★★★★</div><p>"Aconchegante, utensílios ótimos, chuveiro maravilhoso. O anfitrião responde muito rápido, de forma gentil e objetiva."</p><cite>Jennifer · Santo Amaro · ago/2026</cite></figure>
     <figure class="card dup"><div class="stars">★★★★★</div><p>"O lugar estava impecável, limpinho, super bem cuidado e cheiroso. Vista linda. Esperamos voltar em breve."</p><cite>Isabela · Santo Amaro · ago/2026</cite></figure>
     <figure class="card dup"><div class="stars">★★★★★</div><p>"O local é bonito, organizado, cheiroso, seguro. A estação fica na rua principal, a uma quadra."</p><cite>Ana Paula · Santo Amaro · ago/2026</cite></figure>
     <figure class="card dup"><div class="stars">★★★★★</div><p>"Tudo novinho e de muito bom gosto. Precisei entrar de última hora e o anfitrião foi super rápido com as respostas."</p><cite>Joanna · Santo Amaro · jul/2026</cite></figure>
-      <figure class="card dup"><div class="stars">★★★★★</div><p>"Um lugar incrível. Passamos dias muito bons lá. O David nos respondia sempre na hora. Voltaremos com certeza."</p><cite>Patrick · apartamento do David · out/2025</cite></figure>
-    <figure class="card dup"><div class="stars">★★★★★</div><p>"Adoramos o local, estava muito limpo e organizado. Tudo exatamente igual às fotos, e ele responde muito rápido."</p><cite>Maria Antonieta · apartamento do David · ago/2025</cite></figure>
-    <figure class="card dup"><div class="stars">★★★★★</div><p>"O espaço do David é maravilhoso e com certeza tem a vista mais bonita da cidade."</p><cite>Fernando · apartamento do David · jun/2025</cite></figure>
-    <figure class="card dup"><div class="stars">★★★★★</div><p>"Cobertura aconchegante, anfitrião excelente, sempre pronto para responder e atender o hóspede. Instruções claras do apartamento."</p><cite>Hóspede · apartamento do David · jan/2023</cite></figure>
+      <figure class="card dup"><div class="stars">★★★★★</div><p>"Um lugar incrível. Passamos dias muito bons lá. O David nos respondia sempre na hora. Voltaremos com certeza."</p><cite>Patrick · apartamento em Higienópolis · out/2025</cite></figure>
+    <figure class="card dup"><div class="stars">★★★★★</div><p>"Adoramos o local, estava muito limpo e organizado. Tudo exatamente igual às fotos, e ele responde muito rápido."</p><cite>Maria Antonieta · apartamento em Higienópolis · ago/2025</cite></figure>
+    <figure class="card dup"><div class="stars">★★★★★</div><p>"O espaço do David é maravilhoso e com certeza tem a vista mais bonita da cidade."</p><cite>Fernando · apartamento em Higienópolis · jun/2025</cite></figure>
+    <figure class="card dup"><div class="stars">★★★★★</div><p>"Cobertura aconchegante, anfitrião excelente, sempre pronto para responder e atender o hóspede. Instruções claras do apartamento."</p><cite>Hóspede · apartamento em Higienópolis · jan/2023</cite></figure>
   </div></div>
   <div class="marquee rev" aria-hidden="true"><div class="track">
-        <figure class="card"><div class="stars">★★★★★</div><p>"Our stay with David was superb. The house is spacious, full of amenities, in a quiet neighborhood. Any issues were attended to in a timely manner."</p><cite>Guest · acomodação do David</cite></figure>
+        <figure class="card"><div class="stars">★★★★★</div><p>"Our stay with David was superb. The house is spacious, full of amenities, in a quiet neighborhood. Any issues were attended to in a timely manner."</p><cite>Guest · apartamento em Higienópolis</cite></figure>
     <figure class="card"><div class="stars">★★★★★</div><p>"A estadia foi excelente. O local muito confortável, com tudo necessário. Tudo impecável. Com certeza voltarei."</p><cite>Kauan · Santo Amaro · set/2026</cite></figure>
     <figure class="card"><div class="stars">★★★★★</div><p>"Apartamento muito aconchegante, limpo, completinho, cama boa, ducha boa. Raphael, excelente anfitrião."</p><cite>Mirian · Santo Amaro · ago/2026</cite></figure>
-    <figure class="card"><div class="stars">★★★★★</div><p>"A casa tem tudo que a gente precisa. Roupas de cama e toalhas bem limpinhas. David foi um excelente anfitrião."</p><cite>Cristiane · acomodação do David · ago/2026</cite></figure>
+    <figure class="card"><div class="stars">★★★★★</div><p>"A casa tem tudo que a gente precisa. Roupas de cama e toalhas bem limpinhas. David foi um excelente anfitrião."</p><cite>Cristiane · apartamento em Higienópolis · ago/2026</cite></figure>
     <figure class="card"><div class="stars">★★★★★</div><p>"Apartamento muito bom e com uma vista linda."</p><cite>Pedro · Santo Amaro · out/2026</cite></figure>
     <figure class="card"><div class="stars">★★★★★</div><p>"Adoramos nossa estadia, lugar agradável. O apartamento muito aconchegante e limpo. Com certeza voltaremos em breve."</p><cite>Pablo · Santo Amaro · jul/2026</cite></figure>
     <figure class="card"><div class="stars">★★★★☆</div><p>"Tranquila, a localização era perfeita, comércio e transporte muito próximos."</p><cite>Luciana · Santo Amaro · out/2026</cite></figure>
-    <figure class="card"><div class="stars">★★★★★</div><p>"Muito boa a casa, tranquilo o bairro, recomendo."</p><cite>Estevão · acomodação do David · ago/2026</cite></figure>
-        <figure class="card"><div class="stars">★★★★★</div><p>"Ótimo apartamento, em um local com muitas opções de restaurantes e bares. O anfitrião sempre respondeu rapidamente. Tudo perfeito."</p><cite>Sergio · apartamento do David · set/2025</cite></figure>
-    <figure class="card"><div class="stars">★★★★★</div><p>"Apartamento bonito e aconchegante. Anfitrião responde bem rápido e simpático."</p><cite>Stefanny · apartamento do David · out/2025</cite></figure>
-    <figure class="card"><div class="stars">★★★★★</div><p>"Apreciamos sua resposta rápida a todas as nossas perguntas. Sem palavras para as vistas. Condomínio seguro e sem complicações."</p><cite>Thomaz · apartamento do David · fev/2025</cite></figure>
-    <figure class="card dup"><div class="stars">★★★★★</div><p>"Our stay with David was superb. The house is spacious, full of amenities, in a quiet neighborhood. Any issues were attended to in a timely manner."</p><cite>Guest · acomodação do David</cite></figure>
+    <figure class="card"><div class="stars">★★★★★</div><p>"Muito boa a casa, tranquilo o bairro, recomendo."</p><cite>Estevão · apartamento em Higienópolis · ago/2026</cite></figure>
+        <figure class="card"><div class="stars">★★★★★</div><p>"Ótimo apartamento, em um local com muitas opções de restaurantes e bares. O anfitrião sempre respondeu rapidamente. Tudo perfeito."</p><cite>Sergio · apartamento em Higienópolis · set/2025</cite></figure>
+    <figure class="card"><div class="stars">★★★★★</div><p>"Apartamento bonito e aconchegante. Anfitrião responde bem rápido e simpático."</p><cite>Stefanny · apartamento em Higienópolis · out/2025</cite></figure>
+    <figure class="card"><div class="stars">★★★★★</div><p>"Apreciamos sua resposta rápida a todas as nossas perguntas. Sem palavras para as vistas. Condomínio seguro e sem complicações."</p><cite>Thomaz · apartamento em Higienópolis · fev/2025</cite></figure>
+    <figure class="card dup"><div class="stars">★★★★★</div><p>"Our stay with David was superb. The house is spacious, full of amenities, in a quiet neighborhood. Any issues were attended to in a timely manner."</p><cite>Guest · apartamento em Higienópolis</cite></figure>
     <figure class="card dup"><div class="stars">★★★★★</div><p>"A estadia foi excelente. O local muito confortável, com tudo necessário. Tudo impecável. Com certeza voltarei."</p><cite>Kauan · Santo Amaro · set/2026</cite></figure>
     <figure class="card dup"><div class="stars">★★★★★</div><p>"Apartamento muito aconchegante, limpo, completinho, cama boa, ducha boa. Raphael, excelente anfitrião."</p><cite>Mirian · Santo Amaro · ago/2026</cite></figure>
-    <figure class="card dup"><div class="stars">★★★★★</div><p>"A casa tem tudo que a gente precisa. Roupas de cama e toalhas bem limpinhas. David foi um excelente anfitrião."</p><cite>Cristiane · acomodação do David · ago/2026</cite></figure>
+    <figure class="card dup"><div class="stars">★★★★★</div><p>"A casa tem tudo que a gente precisa. Roupas de cama e toalhas bem limpinhas. David foi um excelente anfitrião."</p><cite>Cristiane · apartamento em Higienópolis · ago/2026</cite></figure>
     <figure class="card dup"><div class="stars">★★★★★</div><p>"Apartamento muito bom e com uma vista linda."</p><cite>Pedro · Santo Amaro · out/2026</cite></figure>
     <figure class="card dup"><div class="stars">★★★★★</div><p>"Adoramos nossa estadia, lugar agradável. O apartamento muito aconchegante e limpo. Com certeza voltaremos em breve."</p><cite>Pablo · Santo Amaro · jul/2026</cite></figure>
     <figure class="card dup"><div class="stars">★★★★☆</div><p>"Tranquila, a localização era perfeita, comércio e transporte muito próximos."</p><cite>Luciana · Santo Amaro · out/2026</cite></figure>
-    <figure class="card dup"><div class="stars">★★★★★</div><p>"Muito boa a casa, tranquilo o bairro, recomendo."</p><cite>Estevão · acomodação do David · ago/2026</cite></figure>
-      <figure class="card dup"><div class="stars">★★★★★</div><p>"Ótimo apartamento, em um local com muitas opções de restaurantes e bares. O anfitrião sempre respondeu rapidamente. Tudo perfeito."</p><cite>Sergio · apartamento do David · set/2025</cite></figure>
-    <figure class="card dup"><div class="stars">★★★★★</div><p>"Apartamento bonito e aconchegante. Anfitrião responde bem rápido e simpático."</p><cite>Stefanny · apartamento do David · out/2025</cite></figure>
-    <figure class="card dup"><div class="stars">★★★★★</div><p>"Apreciamos sua resposta rápida a todas as nossas perguntas. Sem palavras para as vistas. Condomínio seguro e sem complicações."</p><cite>Thomaz · apartamento do David · fev/2025</cite></figure>
+    <figure class="card dup"><div class="stars">★★★★★</div><p>"Muito boa a casa, tranquilo o bairro, recomendo."</p><cite>Estevão · apartamento em Higienópolis · ago/2026</cite></figure>
+      <figure class="card dup"><div class="stars">★★★★★</div><p>"Ótimo apartamento, em um local com muitas opções de restaurantes e bares. O anfitrião sempre respondeu rapidamente. Tudo perfeito."</p><cite>Sergio · apartamento em Higienópolis · set/2025</cite></figure>
+    <figure class="card dup"><div class="stars">★★★★★</div><p>"Apartamento bonito e aconchegante. Anfitrião responde bem rápido e simpático."</p><cite>Stefanny · apartamento em Higienópolis · out/2025</cite></figure>
+    <figure class="card dup"><div class="stars">★★★★★</div><p>"Apreciamos sua resposta rápida a todas as nossas perguntas. Sem palavras para as vistas. Condomínio seguro e sem complicações."</p><cite>Thomaz · apartamento em Higienópolis · fev/2025</cite></figure>
   </div></div>
 </section>
 
@@ -488,16 +491,16 @@ footer .legal{font-size:12.5px;line-height:1.8;text-align:right;max-width:60ch}
 
 <section id="perguntas"><div class="wrap">
   <div class="sec-h">
-    <div><p class="eyebrow">Perguntas</p><h2 class="r">O que todo dono pergunta antes de assinar.</h2></div>
+    <div><p class="eyebrow">Perguntas</p><h2 class="r">O que todo proprietário pergunta antes de assinar.</h2></div>
   </div>
   <div class="faq r block">
     <details><summary>O dinheiro passa pela Wisehost?</summary><p>Não. A plataforma paga você, na sua conta. A Wisehost emite nota só da comissão, depois que o relatório do mês fecha.</p></details>
     <details><summary>Quanto custa?</summary><p>Cada imóvel tem uma proposta, feita depois da projeção. Na primeira reunião você vê a conta inteira, com os números dos nossos próprios studios ao lado.</p></details>
     <details><summary>Quem paga a faxina?</summary><p>O hóspede, na taxa de limpeza de cada estadia. No seu relatório ela aparece separada, com faxina e lavanderia.</p></details>
-    <details><summary>O que é por minha conta e o que é por conta da Wisehost?</summary><p>Por conta da Wisehost: a equipe, o software de preço e calendário, a fotografia, o atendimento ao hóspede, a limpeza e a manutenção como serviço, e o relatório mensal. Por sua conta: o imóvel e suas contas (condomínio, luz, internet, IPTU), o enxoval, os produtos de limpeza e reposição, e o material e as peças de qualquer reparo. Tudo o que é seu entra no relatório a preço de custo, com nota, antes de qualquer comissão.</p></details>
+    <details><summary>O que é por minha conta e o que é por conta da Wisehost?</summary><p>Por conta da Wisehost: a equipe, o software de preço e calendário, a fotografia, o atendimento ao hóspede, a limpeza e a manutenção como serviço, e o relatório mensal. Por sua conta: o imóvel e suas contas (condomínio, luz, internet, IPTU), o enxoval, os produtos de limpeza e reposição, o material e as peças de qualquer reparo, e a mão de obra de profissional especializado (eletricista, encanador, técnico de ar-condicionado), que a Wisehost contrata e acompanha para você. Tudo o que é seu entra no relatório a preço de custo, com nota, antes de qualquer comissão.</p></details>
     <details><summary>Em quanto tempo meu imóvel fica no ar?</summary><p>Dois dias depois da visita do fotógrafo, com o anúncio no Airbnb e no Booking sincronizados.</p></details>
     <details><summary>Vocês atendem o meu bairro?</summary><p>Atendemos toda a cidade de São Paulo. Nossos studios ficam na zona sul, e a equipe de campo atende por região. Mande o endereço e respondemos em 48 horas.</p></details>
-    <details><summary>E se o hóspede quebrar alguma coisa?</summary><p>Abrimos o pedido na plataforma com as fotos da vistoria de saída. A equipe de manutenção resolve e o custo da reposição sai no relatório, com nota.</p></details>
+    <details><summary>E se o hóspede quebrar alguma coisa?</summary><p>Abrimos o pedido na plataforma com as fotos da vistoria de saída e cobramos do hóspede pelo Airbnb. A equipe resolve o conserto; o que o Airbnb não cobrir sai no relatório, com nota.</p></details>
     <details><summary>Meu prédio permite Airbnb?</summary><p>Lemos a convenção e o regimento antes de assinar, e checamos a matrícula. É o que protege você de multa e de briga com o condomínio.</p></details>
     <details><summary>Tem fidelidade?</summary><p>Não. Você sai com 30 dias de aviso, e o anúncio, as avaliações e a fechadura vão com você.</p></details>
   </div>
